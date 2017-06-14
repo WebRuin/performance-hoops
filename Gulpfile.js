@@ -1,11 +1,23 @@
 var gulp = require('gulp');
+var pump = require('pump');
 var sass = require('gulp-sass');
+var uglify = require('gulp-uglify');
 var cleanCSS = require('gulp-clean-css');
 
 gulp.task('styles', function() {
     gulp.src('./assets/sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./assets/css/'))
+});
+
+gulp.task('js-min', function (cb) {
+  pump([
+        gulp.src('./assets/js/**/*.js'),
+        uglify(),
+        gulp.dest('./assets/js/')
+    ],
+    cb
+  );
 });
 
 gulp.task('minify-css', function() {
