@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var pump = require('pump');
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
+var purify = require('gulp-purifycss');
 var cleanCSS = require('gulp-clean-css');
 
 gulp.task('styles', function() {
@@ -18,6 +19,12 @@ gulp.task('js-min', function (cb) {
     ],
     cb
   );
+});
+
+gulp.task('css-clean', function() {
+  return gulp.src('./assets/css/main.css')
+    .pipe(purify(['./assets/js/**/*.js', './**/*.html']))
+    .pipe(gulp.dest('./assets/css/'));
 });
 
 gulp.task('minify-css', function() {
