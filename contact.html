@@ -42,9 +42,7 @@
 						</header>
 						<section class="wrapper style5">
 							<div class="inner">
-								<iframe width="600" height="450" frameborder="0" style="border:0"
-src="https://www.google.com/maps/embed/v1/place?q=93+Bovet+Rd.+San+Mateo,+CA+94402&key=AIzaSyA5z8rvyb6JAqCqKb9hZpVKfM4wjx-Rql0" allowfullscreen></iframe>
-								
+								<div id="map"></div>
 								<section>
 									<div class="row">
 										<div class="8u 12u$(medium)">
@@ -87,6 +85,21 @@ src="https://www.google.com/maps/embed/v1/place?q=93+Bovet+Rd.+San+Mateo,+CA+944
 				src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 				integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
 				crossorigin="anonymous"></script>
+			<script>
+				function initMap() {
+					var myGym = {lat: -25.363, lng: 131.044};
+					var map = new google.maps.Map(document.getElementById('map'), {
+						zoom: 4,
+						center: myGym
+					});
+					var marker = new google.maps.Marker({
+						position: myGym,
+						map: map
+					});
+				}
+			</script>
+			<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLzmczOe_jRJD6G-cKfFiuxWSBbK7F-ik&callback=initMap"
+  type="text/javascript"></script>
 			<script async src="assets/js/jquery.scrollex.min.js"></script>
 			<script async src="assets/js/jquery.scrolly.min.js"></script>
 			<script async src="assets/js/skel.min.js"></script>
