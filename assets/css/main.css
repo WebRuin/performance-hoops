@@ -907,8 +907,9 @@ body, input, select, textarea {
       letter-spacing: 0.0375em; } }
 
 .map {
-  height: 100%;
-  width: 400; }
+  height: 60vh;
+  width: 100%;
+  margin-bottom: 3rem; }
 
 a {
   -moz-transition: color 0.2s ease, border-bottom-color 0.2s ease;
@@ -2004,6 +2005,10 @@ button,
   @media screen and (max-width: 736px) {
     .wrapper {
       padding: 3em 2em 1em 2em ; } }
+
+.small-padding {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important; }
 
 /* Page Wrapper + Menu */
 #page-wrapper {

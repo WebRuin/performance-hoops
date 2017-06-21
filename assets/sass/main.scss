@@ -66,8 +66,9 @@
 	}
 
 	.map {
-		height: 100%;
-		width: 400;
+		height: 60vh;
+		width: 100%;
+		margin-bottom: 3rem;
 	}
 
 	a {
@@ -1272,6 +1273,11 @@
 		@include breakpoint(small) {
 			@include padding(3em, 2em);
 		}
+	}
+
+	.small-padding {
+		padding-top: 2rem !important;
+		padding-bottom: 2rem !important;
 	}
 
 /* Page Wrapper + Menu */
