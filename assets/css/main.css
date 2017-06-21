@@ -907,7 +907,7 @@ body, input, select, textarea {
       letter-spacing: 0.0375em; } }
 
 .map {
-  height: 60vh;
+  height: 500px;
   width: 100%;
   margin-bottom: 3rem; }
 
