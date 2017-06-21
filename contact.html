@@ -9,6 +9,14 @@
 		<noscript><link rel="stylesheet" href="assets/css/main.css"></noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+
+		<style>
+			.map {
+				height: 500px;
+				width: 100%;
+				margin-bottom: 3rem;
+			}
+		</style>
 	</head>
 	<body>
 
@@ -42,22 +50,24 @@
 						</header>
 						<section class="wrapper style5">
 							<div class="inner">
-								<div id="map"></div>
 								<section>
 									<div class="row">
-										<div class="8u 12u$(medium)">
+										<div class="6u 12u$(medium)">
+											<h3>Our Location</h3>
 											<ul class="alt">
 												<li><b>Address:</b> 93 Bovet Rd. San Mateo, CA 94402</li>
 												<li><b>Phone Contact:</b> (510) 566-4109</li>
 											</ul>
-											
-											<h3 class="compact">Hours Of Operation</h3>
+										</div>
+										<div class="6u 12u$(medium)">
+											<h3>Hours Of Operation</h3>
 											<ul class="alt">
 												<li><b>Mon-Fri:</b> 8am - 5:30pm</li>
 												<li><b>Sat-Sun:</b> 8am - 6:30pm</li>
 											</ul>
 										</div>
 									</div>
+									<div class="map" id="map"></div>
 								</section>
 							</div>
 						</section>
@@ -87,9 +97,9 @@
 				crossorigin="anonymous"></script>
 			<script>
 				function initMap() {
-					var myGym = {lat: -25.363, lng: 131.044};
+					var myGym = {lat: 37.549696, lng: -122.314780};
 					var map = new google.maps.Map(document.getElementById('map'), {
-						zoom: 4,
+						zoom: 17,
 						center: myGym
 					});
 					var marker = new google.maps.Marker({
